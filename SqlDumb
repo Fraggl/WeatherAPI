@@ -1,0 +1,31 @@
+SQL-Dump
+-- phpMyAdmin SQL Dump
+-- version 3.4.11.1deb2+deb7u1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Erstellungszeit: 16. Apr 2015 um 09:52
+-- Server Version: 5.5.41
+-- PHP-Version: 5.4.39-0+deb7u1
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Datenbank: `WetterDB`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `TB_Weather`
+--
+
+CREATE TABLE IF NOT EXISTS `TB_Weather` (
+  `MessID` int(11) NOT NULL AUTO_INCREMENT,
+  `StationID` int(2) NOT NULL,
+  `SensorID` int(2) NOT NULL,
+  `Messwert` float NOT NULL,
+  `Ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`MessID`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=269 ;
